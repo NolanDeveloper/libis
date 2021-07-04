@@ -67,7 +67,7 @@ LibisError libis_source_create_from_file(Libis *libis, LibisSource **source, FIL
     *file = NULL;
     result = NULL;
 end:
-    if (*file) {
+    if (file && *file) {
         fclose(*file);
     }
     free(result);
